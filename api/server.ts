@@ -16,7 +16,7 @@ async function startServer() {
 
   app.use(vite.middlewares);
 
-  app.use(async (req: Request, res: Response) => {
+  app.use(async (req, res) => {
     try {
       const url = req.originalUrl;
 
