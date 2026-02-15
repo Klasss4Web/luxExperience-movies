@@ -43,7 +43,7 @@
 .movie-detail--topRated {
   background-color: var(--bg-toprated);
   color: var(--text);
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .movie-detail--upcoming {
