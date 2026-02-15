@@ -37,27 +37,26 @@ async function startServer() {
         .replace(
           "</head>",
           `
-      <meta name="description" content="${meta.description}" />
-      <link rel="canonical" href="luxexperience.com${meta.canonical}" />
+              <meta name="description" content="${meta.description}" />
+              <link rel="canonical" href="luxexperience.com${meta.canonical}" />
 
-      <meta property="og:title" content="${meta.title}" />
-      <meta property="og:description" content="${meta.description}" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="${meta.image}" />
-      <meta property="og:url" content="luxexperience.com${meta.canonical}" />
-    </head>
-    `,
-        )
-        .replace(
-          "</body>",
-          `<script>
-      window.__SSR_DATA__ = ${JSON.stringify(data)}
-    </script></body>`,
+              <meta property="og:title" content="${meta.title}" />
+              <meta property="og:description" content="${meta.description}" />
+              <meta property="og:type" content="website" />
+              <meta property="og:image" content="${meta.image}" />
+              <meta property="og:url" content="luxexperience.com${meta.canonical}" />
+            </head>
+            `,
+          )
+          .replace(
+            "</body>",
+            `<script>
+              window.__SSR_DATA__ = ${JSON.stringify(data)}
+            </script></body>`,
         );
       res.status(200).set({ "Content-Type": "text/html" }).end(responseHtml);
     } catch (err: unknown) {
       vite.ssrFixStacktrace(err as Error);
-      console.error(err);
       res.status(500).send("Internal Server Error");
     }
   });

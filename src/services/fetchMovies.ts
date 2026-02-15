@@ -7,13 +7,13 @@ async function fetchFromTMDB(endpoint: string) {
   try {
     const res = await fetch(`${BASE_URL}${endpoint}?api_key=${MOVIE_API_KEY}`);
 
-    if (!res.ok) {
+    if (!res.ok && res.status !== 404) {
       throw new Error("TMDB request failed");
     }
 
     return res.json();
   } catch (error) {
-    logger.error("Couldnt get request through", error as Error);
+    logger.error("Movie API is ending a warning", error as Error);
   }
 }
 

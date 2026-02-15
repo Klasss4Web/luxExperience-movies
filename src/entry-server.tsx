@@ -67,7 +67,6 @@ export async function render(url: string) {
         };
       } catch (error) {
         data = { error: error as string };
-        logger.error("Failed to fetch movie", error as Error);
       }
     }
 
