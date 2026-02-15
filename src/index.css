@@ -87,7 +87,7 @@ button:focus-visible {
     background-color: var(--text);
   }
   a:hover {
-    color: var(--pupple);
+    color: var(--gold);
   }
   button {
     background-color: var(--light-gray);
