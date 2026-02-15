@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import express, { Request, Response } from "express";
+import express from "express";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
 
