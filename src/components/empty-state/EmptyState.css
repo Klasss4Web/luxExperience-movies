@@ -1,0 +1,151 @@
+.err-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  padding: 1.5rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.err-card {
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  animation: errFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.err-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 2.5rem;
+}
+
+.err-icon-glow {
+  position: absolute;
+  inset: -10px;
+  background-color: var(--color-error);
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0.15;
+  animation: errPulse 3s infinite ease-in-out;
+}
+
+.err-icon-main {
+  position: relative;
+  background: var(--color-card-bg);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.err-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.err-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.err-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.err-btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.err-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+}
+
+.err-btn--primary {
+  background-color: var(--color-primary);
+  color: var(--text);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.err-btn--primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.err-btn--secondary {
+  flex: 1;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--hover-white);
+}
+
+.err-btn--secondary:hover {
+  background-color: var(--bg-white);
+  color: var(--color-primary-hover);
+}
+
+.err-footer {
+  margin-top: 3rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--mutted-white);
+  font-weight: 800;
+}
+
+@keyframes errFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes errPulse {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.4);
+  }
+}
+
+.err-btn--primary:hover svg {
+  animation: errSpin 1.2s infinite linear;
+}
+
+@keyframes errSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

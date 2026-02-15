@@ -1,0 +1,56 @@
+.client-rating {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--mutted-gray);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.client-rating h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--bg);
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.star {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--dark-gray);
+  transition:
+    transform 0.15s ease,
+    color 0.2s ease;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star.active {
+  color: var(--gold);
+}
+
+.rating-value {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  color: var(--dark-gray);
+}
+
+@media (min-width: 768px) {
+  .star {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .star {
+    font-size: 2rem;
+  }
+}

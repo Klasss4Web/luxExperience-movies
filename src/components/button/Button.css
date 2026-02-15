@@ -1,0 +1,30 @@
+.btn {
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.btn--action {
+  background: var(--color-error);
+  color: var(--text);
+}
+
+.btn--drama {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.btn--active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
