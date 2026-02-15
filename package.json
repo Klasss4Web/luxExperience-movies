@@ -7,7 +7,6 @@
     "lint": "eslint .",
     "preview": "node server/server.ts",
     "dev": "node server/server.ts",
-    // "build": "vite build && vite build --ssr",
     "start": "node server/server.ts",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
