@@ -19,10 +19,8 @@ Follow these instructions to get `luxExperience Movies` project up and running o
 - Run `npm run dev` to start the development server. You will see `SSR server running at http://localhost:5173` on your terminal
 - Open [http://localhost:5173/](http://localhost:5173/) to view it in your browser.
 - To serve the project for production, simply run
-- You will need two environment variables to run this app successfully
+- You will need one environment variables to run this app successfully
   - VITE_TMDB_API_KEY
-  - NODE_ENV
-
 ```
 npm run build
 npm run preview
