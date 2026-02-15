@@ -14,7 +14,7 @@ Follow these instructions to get `luxExperience Movies` project up and running o
 
 ## <img src="./src/assets/icons/gear.png" width="30px" height="30px"> Installation and Usage.
 
-- Clone the repository `As at te time of writing this piece, i have not created a remote repository for the project, I will come back and update when that is done`
+- Clone the repository [GitHub repo for luxexperience movies](https://github.com/Klasss4Web/luxExperience-movies)
 - Run `npm install` to install all dependencies.
 - Run `npm run dev` to start the development server. You will see `SSR server running at http://localhost:5173` on your terminal
 - Open [http://localhost:5173/](http://localhost:5173/) to view it in your browser.
